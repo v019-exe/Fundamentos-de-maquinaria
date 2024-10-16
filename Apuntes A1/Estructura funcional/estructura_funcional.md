@@ -152,10 +152,16 @@ La memoria principal está formada por celdas o posiciones de memoria numeradas 
 Cada celda tiene un nombre que se denomina como posición de memoria y un identificador único que se denomina dirección de memoria.
 
 ```mermaid
-graph LR
-    subgraph "Memoria"
-        A1["1\nDirección\nde memoria"] --- A2["2"] --- A3["3"] --- A4["4"] --- A5["5"] 
-        A5 --- A6["6"] --- A7["7\nPosición\nde memoria"] --- A8["8"] --- A9["9"] --- A10["100"]
-    end
+graph TD
+    A1["1<br>Dirección<br>de memoria"] --> A2["2"]
+    A2 --> A3["3"]
+    A3 --> A4["4"]
+    A4 --> A5["5"]
+    A5 --> A6["6"]
+    A6 --> A7["7<br>Posición<br>de memoria"]
+    A7 --> A8["8"]
+    A8 --> A9["9"]
+    A9 --> A10["100"]
+
 ```
 
