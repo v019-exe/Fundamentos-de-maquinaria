@@ -203,23 +203,23 @@ Está formada por:
 ```mermaid
 graph TB
     %% Bloques principales
-    registrosDades[Registres de dades] --> busIntern[Bus de dades intern]
-    busIntern --> registrosAdreces[Registres d'adreces]
-    busIntern --> ALU[Unitat aritmètica i lògica]
-    ALU --> registresEspecifics[Registres específics]
-    busIntern --> registresEspecifics
+    registrosDatos[Registros de datos] --> busInterno[Bus de datos interno]
+    busInterno --> registrosDirecciones[Registros de direcciones]
+    busInterno --> ALU[Unidad aritmética y lógica]
+    ALU --> registrosEspecificos[Registros específicos]
+    busInterno --> registrosEspecificos
 
     %% Unidad de control conectada
-    unitatControl[Unitat de control] --> busControlExtern[Bus de control extern]
-    busIntern --> unitatControl
+    unidadControl[Unidad de control] --> busControlExterno[Bus de control externo]
+    busInterno --> unidadControl
 
     %% Buses externos
-    registrosAdreces --> busAdrecesExtern[Bus d'adreces extern]
-    unitatControl --> busAdrecesExtern
-    registresEspecifics --> busDadesExtern[Bus de dades extern]
-    busIntern --> busDadesExtern
+    registrosDirecciones --> busDireccionesExterno[Bus de direcciones externo]
+    unidadControl --> busDireccionesExterno
+    registrosEspecificos --> busDatosExterno[Bus de datos externo]
+    busInterno --> busDatosExterno
 
     %% Relaciones externas
-    busAdrecesExtern -.-> busDadesExtern
-    busAdrecesExtern -.-> busControlExtern
+    busDireccionesExterno -.-> busDatosExterno
+    busDireccionesExterno -.-> busControlExterno
 ```
