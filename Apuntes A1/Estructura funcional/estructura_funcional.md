@@ -63,7 +63,7 @@ También conocidos como UCP (Unidad central de procesamiento) o CPU. Es la parte
 
 + ALU (Unidad Aritmético-Lógica): Realiza operaciones matemáticas y lógicas.
 
-```mermaid
+
 ```mermaid
 flowchart TD;
     A[CPU] --> B[Procesador];
