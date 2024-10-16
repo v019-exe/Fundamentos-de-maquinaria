@@ -139,3 +139,30 @@ flowchart TD;
     E --> D;
 ```
 
+## Memoria principal y sus elementos
+
+La memoria principal o central, es el dispositivo electronico en el cual se situan los datos o instryucciones que manipulará la ALU o los resultados que se obtengan de estos tratamientos.
+
+La memoria principal tiene una capacidad límitada y en determinados momentos el precio de las memorias principales han estado mas elevados que otros componentes de maquinaria. Por esto y otros factores, esta memoria complementa con la memoria externa o memoria secundaria.
+
+### Elementos de la memoria principal
+
+La memoria principal está formada por celdas o posiciones de memoria numeradas de manera consecutiva. Dichas celdas son capaces de mantener la información almacenada en ellas mientras esté el ordenador en funcionamiento.
+
+Cada celda tiene un nombre que se denomina como posición de memoria y un identificador único que se denomina dirección de memoria.
+
+```mermaid
+graph TD
+    subgraph "Memoria"
+        A1["1\nDirección de memoria"] --> A2["2"]
+        A2 --> A3["3"]
+        A3 --> A4["4"]
+        A4 --> A5["5"]
+        A5 --> A6["6"]
+        A6 --> A7["7\nPosición de memoria"]
+        A7 --> A8["8"]
+        A8 --> A9["9"]
+        A9 --> A10["100"]
+    end
+```
+
