@@ -53,3 +53,78 @@ $$[Dirección]\rightarrow[Valor]$$
   - $$0x0000 \rightarrow 10$$
   - $$0x0001 \rightarrow 20$$
   - $$0x0002 \rightarrow 30$$
+
+#### Jerarquía de la memoria
+La memoria se organiza en diferentes niveles en función de su velocidad, capacidad y coste.
+
+Los niveles de memoria son:
+
++ Registros: Memorias de alta velocidad, baja capacidad integradas en el procesador; se utilizan para el almacenamiento intermedio de los datos, especialmente en la UC y la UAL.
+
++ Caché: Memoria intermedia entre la UM y la CPU, permite accelerar el acceso a datos- Cuando se accede a un dato,, este se copia en la cajita para que podamos acceder mas tarde a el de manera más rápida. Tiene diferentes niveles
+1. L1
+2. L2
+3. L3
+4. L4
+
++ Principal (RAM): La memoria principal, es decir la memoria RAM, es la memoria principal del ordenador, se usa para almacenar datos y programas de manera temporal.
+
++ Secundaria o memoria de disco: Formada por los discos duros del ordenador, es una memoria de alta capacidad no volátil, lo que significa que guarda la información de manera permanente.
+
++ Auxiliar: Esta memoria se usa como copias de seguridad, pudiendo ser situados en medios extraibles o en red, como cinta magnética, disco duro extraible o almacenamiento en red.
+
+### Unidad central de procesamiento (CPU)
+Tambien conocida como CPU, es la unidad central de procesamiento del ordenador. Se encarga de procesar la información que llega al equipo. Existen otros chips en el ordenador que sirven de soporte al procesador, pero este es el que aporta la mayor carga. La CPU está compuesta por:
+
++ UAL: se encarga de realizar operaciones aritméticas y lógicas.
+
+#### UAL
+Se pueden clasificar en tres tipos:
+
+| **Su ámbito**                   | **Descripción**                                                  |
+|---------------------------------|-----------------------------------------------------------------|
+| **Genéricos**                   | Pueden realizar diferentes operaciones.                          |
+| **Específicos**                 | Només pueden realizar un tipo de operación.                     |
+| **El número de operandos**      |                                                                 |
+| **Monádicos**                   | Només una entrada, por ejemplo, el negador.                     |
+| **Diádicos**                    | Dues entradas, por ejemplo, el operador suma.                   |
+| **Triádicos**                   | Tres entradas, por ejemplo, el condicional.                     |
+| **Su capacidad de operar**      |                                                                 |
+| **Serie**                       | Reciben la información en una secuencia de bits y la procesan uno a uno hasta acabar toda la serie. |
+| **Paralelo**                    | Reciben la información en bloques de bits, que procesan de manera simultánea. |
+
+### UC
+La UC es el centro nervioso del ordenador, ya que coordina el resto de unidades funcionales.
+
+Su función principal, realizar la búsqueda, carga y interpretación de las instrucciones de los programas que se encuentran almacenadas en la memoria para después emitir la secuencia adecuada de ordenes y que se ejecuten correctamente.
+
+## I/0
+
+| **TIPOS**                       | **FUNCIÓN**                                                   | **EJEMPLOS**                                |
+|---------------------------------|--------------------------------------------------------------|---------------------------------------------|
+| **Periféricos de entrada**      | Con ellos el usuario introduce la información al ordenador.   | teclado, ratón, escáner                     |
+| **Periféricos de salida**       | Se utiliza el ordenador para mostrar la información al usuario.| monitor, impresora, altavoces               |
+| **Periféricos de E/S**          | Se usan para establecer una comunicación entre dos o más ordenadores. | enrutador, switch, tarjeta de red           |
+| **De almacenamiento**           | Se encargan de guardar los datos para que la CPU pueda usarlos una vez eliminados de la memoria principal. | disco duro, memoria USB, CD/DVD             |
+
+## Periféricos
+
+## Intercambio de información entre periféricos y CPU
+
+Los periféricos intercambian información con el ordenador gracias a un sistema que consta de dos partes:
+
+| **Parte**      | **Descripción**                                                                                                 |
+|----------------|-----------------------------------------------------------------------------------------------------------------|
+| **Interfaz**   | Gestiona el intercambio de información entre el periférico y la CPU. Adapta la información específica de cada dispositivo a un conjunto de señales normalizadas que actúan como interlocutor del periférico y la máquina. |
+| **Controlador** | Se ocupa directamente del periférico. Es un sistema electrónico o mecánico que solo interactúa con el propio periférico, para que el cual cosa puede deducir que es específico de éste. |
+
+## Técnicas de gestión de E/S
+
+La gestión de la E/S es uno de los pilares fundamentales en el rendimiento de un ordenador, ya que todos los dispositivos que se conectan al equipo compiten por el uso de la CPU para poder operar. Para facilitar la comunicación interna del módulo de E/S, la CPU y la memoria existen diversas técnicas:
+
+| **Técnica**                      | **Descripción**                                                                                  |
+|----------------------------------|--------------------------------------------------------------------------------------------------|
+| **E/S programada**               | Puede realizarse en serie o en paralelo; la CPU y el módulo de E/S intercambian los datos.    |
+| **E/S por interrupciones**       | El procesador espera que el módulo de E/S esté preparado, lo cual aumenta el tiempo de manera considerable. |
+| **E/S por acceso directo a memoria (DMA)** | Permite al módulo de E/S comunicarse sin interrupciones para liberar una gran carga de trabajo.     |
+
