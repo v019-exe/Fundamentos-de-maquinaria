@@ -54,3 +54,20 @@ graph TD;
     D[Dispositivos de entrada/salida] --> B;
     B --> D;
 ```
+
+### Dispositivos de procesamiento
+También conocidos como UCP (Unidad central de procesamiento) o CPU. Es la parte más importante de un ordenador, en el que se manipula la información. Los dispositivos de procesamiento son los que se encargan de coordinar y llevar a cabo todas las operaciones de tipo lógico y matemático.
+
++ Procesador (microprocesador): Cerebro del ordenador, coordina y dirige la faena que se tiene que hacer en cada momento.
++ CU (Unidad de cntrol): Se encarga de governar el resto de las unidades, es decir, interpreta las instrucciones y controla la ejecución y la secuencia.
+
++ ALU (Unidad Aritmético-Lógica): Realiza operaciones matemáticas y lógicas.
+
+```mermaid
+graph TD;
+    A[CPU] --> B[Processador];
+    B --> C[Unitat de control (CU)];
+    B --> D[Unitat aritmètica i lògica (ALU)];
+    B --> E[Memòria principal];
+    E --> B;
+```
