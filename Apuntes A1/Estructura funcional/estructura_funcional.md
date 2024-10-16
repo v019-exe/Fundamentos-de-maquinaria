@@ -64,10 +64,11 @@ También conocidos como UCP (Unidad central de procesamiento) o CPU. Es la parte
 + ALU (Unidad Aritmético-Lógica): Realiza operaciones matemáticas y lógicas.
 
 ```mermaid
+```mermaid
 graph TD;
-    A[CPU] --> B[Processador];
-    B --> C[Unitat de control (CU)];
-    B --> D[Unitat aritmètica i lògica (ALU)];
+    A[CPU] --> B[Procesador];
+    B --> C["Unitat de control CU"];
+    B --> D["Unitat aritmètica i lògica ALU"];
     B --> E[Memòria principal];
     E --> B;
 ```
