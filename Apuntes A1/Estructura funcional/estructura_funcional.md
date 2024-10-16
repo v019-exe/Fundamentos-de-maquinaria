@@ -247,3 +247,50 @@ Registros internos específicos, podemos indicar los siguientes:
 
 + Registro de instrucción: La unidad de control tiene una referencia permanente de la instrucción en curso mediante el registro de instrucción. Mantiene el código de la instrucción que se está ejecutando.
 
+### ALU
+La unidad aritmética y lógica gestiona las operaciones elementales de tipo aritmético (sumas, restos, etc etc.) y, también, las de tipo lógico (operaciones en las que el resultado es verdadero o falso).
+
+Esta unidad tiene dos entradas para los operandos y una salida para el resultado. El procesador se dirige a las entradas ALU cuyos registros debe realizarse la operación. El resultado aparece a la salida de la ALU y se recoge en un registro o se envía al autobús. Muchos procesadores dirigen la salida de la ALU hacia el acumulador.
+
+Podemos encontrar los siguientes:
+
++ Circuitos operacionales: Circuitos necesarios para hacer las operaciones con los datos procedentes de los registros de entrada.
+
++ Registro de entrada: Almacena datos o operandos que intervienen en una instrucción antes de la realización de la operación por parte del circuito operacional.
+
++ Registro acumulador: Almacena los resultados númericos del circuito operacional.También está conectado a los registros de entrada para la retroalimentación, en caso de operaciones encadenadas y tiene una conexión con el bus de datos para enviar los resultados a la memoria principal o a la UC.
+
++ Registro de estado: Registro que almacena algunas condiciones de situaciones esdevenidas en la ultima operación hecha y que tenemos que tener en cuenta en las operaciones siguientes.
+
+### Buses
++ Bus de datos: Mueve los datos entre los dispositivos del maquinario de entrada, de salida y de almacenamiento.
++ Bus de direcciones: Está vinculado al bloque de control de la CPU para prender y colocr los datos en el subsistema de memoria durante la ejecución de los procesos de computo.
+
++ Bus de control: Transporta señales de estado de las operaciones hechas por el CPU con el resto de unidades.
+
+### Unidad de control
+
+La unidad de control hace una serie de operaciones básicas para el funcionamiento del procesador:
+
++ Interpreta las instrucciones del programa que llegan a la memoria del sistema.
++ Dirige los registros adecuados hacia la ALU.
++ Controla los buses internos.
++ Ordena a la ALU efectuar la operación indicada en el programa.
++ LLeva de la memoria los datos necesarios y envia los datos resultantes.
++ Gestiona los buses externos de comunicación con la memoria externa y los periféricos.
+
+```mermaid
+graph TB
+    %% Bloques principales
+    reloj[Reloj] --> secuenciador[Secuenciador]
+    secuenciador --> contadorP[Contador de programa]
+    secuenciador --> microordenes[Microórdenes]
+    secuenciador --> descodificador[Descodificador]
+    descodificador --> registroInstruccion[Registro de instrucción]
+    registroInstruccion --> bus[BUS]
+    secuenciador --> bus
+    
+    %% Conexiones adicionales
+    contadorP --> secuenciador
+    registroInstruccion --> descodificador
+```
