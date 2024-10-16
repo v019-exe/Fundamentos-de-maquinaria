@@ -178,4 +178,48 @@ $$
 AB = 1 / TC
 $$
 
+**Secuencia de pasos para leer o escribir un dato en la memoria principal**
 
+1. Leer: Para leer un dato se siguen los pasos siguientes:
++ Se pone la dirección de memoria en el registro de dirección.
++ Mediante el descodificador, se accede a la dirección de memoria.
++ Se situan los datos en el registro de datos.
+
+2. Escribir: Para escribir un dato se siguen los pasos siguientes:
++ Se transfiere la dirección en la qeu se escribirá en el registro de dirección.
++ Se transfieren los datos al registro de información.
++ Se descodifica la dirección de memoria.
++ Se pasa el contenido del registro de información a la dirección que contiene el registro de dirección.
+
+## CPU
+
+Como hemos mencionado anteriormente, el CPU es el cerebro del ordenador, es el encargado de coordinar y dirigir la ejecución de todas las operaciones de procesamiento.
+
+Está formada por:
++ Registros
++ ALU
++ CU
+
+```mermaid
+graph TB
+    %% Bloques principales
+    registrosDades[Registres de dades] --> busIntern[Bus de dades intern]
+    busIntern --> registrosAdreces[Registres d'adreces]
+    busIntern --> ALU[Unitat aritmètica i lògica]
+    ALU --> registresEspecifics[Registres específics]
+    busIntern --> registresEspecifics
+
+    %% Unidad de control conectada
+    unitatControl[Unitat de control] --> busControlExtern[Bus de control extern]
+    busIntern --> unitatControl
+
+    %% Buses externos
+    registrosAdreces --> busAdrecesExtern[Bus d'adreces extern]
+    unitatControl --> busAdrecesExtern
+    registresEspecifics --> busDadesExtern[Bus de dades extern]
+    busIntern --> busDadesExtern
+
+    %% Relaciones externas
+    busAdrecesExtern -.-> busDadesExtern
+    busAdrecesExtern -.-> busControlExtern
+```
