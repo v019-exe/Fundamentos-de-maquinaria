@@ -65,10 +65,10 @@ También conocidos como UCP (Unidad central de procesamiento) o CPU. Es la parte
 
 ```mermaid
 ```mermaid
-graph TD;
+flowchart TD;
     A[CPU] --> B[Procesador];
-    B --> C["Unitat de control CU"];
-    B --> D["Unitat aritmètica i lògica ALU"];
+    B --> C[Unitat de control CU];
+    B --> D[Unitat aritmètica i lògica ALU];
     B --> E[Memòria principal];
     E --> B;
 ```
