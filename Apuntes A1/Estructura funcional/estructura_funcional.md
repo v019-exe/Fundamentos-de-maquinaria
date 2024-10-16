@@ -72,3 +72,70 @@ flowchart TD;
     B --> E[Memòria principal];
     E --> B;
 ```
+
+## Unidades funcionales
+
++ Unidades de entrada
++ Unidades de procesamiento y almacenamiento
++ Unidades de salida
++ Unidades entrada/salida
+
+Definimos como unidades funcionales del ordenador como el conjunto de elementos de maquinaria imprescindibles para que el ordenador funcione.
+
+Se pueden clasificar en 3 tipos:
+
++ CPU
++ Memoria principal
++ I/O
+
+Todos los elementos que forman las unidades funcionales necesitan algún tipo de comunicación para funcionar correctamente, a esto se le llama bus y se consigue con el bus del sistema.
+
+También para la comunicación entre estos dispositivos y otras máquinas sea eficiente, a veces hace falta que otras máquinas las gestionen. Esto es lo que hacen los controladores. Son dispositivo que gestionan el funcionamiento de determinadas máquinas y hacen la comunicación entre elementos de las unidades funcionales y dispositivos periféricos.
+
+**UCP, Memoria central, controladora, I/O**
+```mermaid
+flowchart TD;
+    A[UCP] --> B[Memoria central];
+    B --> A;
+    A --> C[Controladora];
+    C --> D[Unidad de entrada/salida];
+    D --> C;
+    D --> B;
+    B --> D;
+    C --> B;
+    C --> A;
+```
+**Entrada, procesador, memoria, UC, ALU**
+
+```mermaid
+flowchart TD;
+    A[Entrada] --> B[Memoria principal (Datos e instrucciones)];
+    B --> C[Unidad de control];
+    B --> D[Unidad aritmética y lógica (ALU)];
+    C --> E[Procesador central (CPU)];
+    D --> E;
+    B --> F[Memoria masiva];
+    F --> B;
+    E --> G[Salida];
+```
+
+**UCP, Unidad de control, memoria, periféricos, buses de datos y control**
+```mermaid
+flowchart TD;
+    A[UCP/CPU] --> B[UC: Unidad de control];
+    B --> C[Memoria principal (MP)];
+    C --> D[Memoria secundaria o masiva];
+    D --> C;
+    C --> E[Bus de datos];
+    E --> F[Periféricos];
+    F --> G[Unidad de entrada];
+    G --> F;
+    F --> H[Unidad de salida];
+    H --> F;
+    F --> C;
+    C --> A;
+    A --> B;
+    A --> E;
+    E --> D;
+```
+
