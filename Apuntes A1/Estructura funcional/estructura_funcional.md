@@ -348,3 +348,54 @@ graph TD
     A -->|Control de entrada / salida| C[Memoria]
     B --> C
 ```
+
+## Interfaz procesador-periférico
++ Registros: Los dispositivos se pueden conectar al procesador mediante los registros de los dispositivos, los cuales se pueden acceder de manera directa en una zona determinada de memoria o indirectamente por orden de la maquinaria que devuelve el estado del dispositivo
++ Controladores: Los dispositivos complejos, no se conectan directamente al procesador, si no que por medio de un controlador que contiene el estado del dispositivo, lo controla y comprueba los datos transferidos.
++ Canales: Normalmente los controladores estan conectados al procesador por un canal o procesador de I/O (IOP)
+
+## Estructura externa de un sistema microinformático
+
+La estructura externa de un equipo microinformático consta básicamente de 4 elementos:
+1. UC Unidad central
+2. Monitor
+3. Teclado
+4. Ratón
+
+Los elementos externos a la unidad central se conectan por medio de sus cables.
+
+| Conector            | Descripción                                                                                                                                                       |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **DIN hembra**      | Tiene cinco orificios y corresponde al antiguo conector del teclado estándar. Actualmente no se utiliza.                                                           |
+| **PS/2 hembra**     | Es el conector del teclado y ratón de tipo PS/2. También se denomina mini DIN.                                                                                      |
+| **DE-9 macho**      | Conector de nueve pines. Es el conector en serie RS-232C, también llamado COM1. Actualmente no se utiliza. Se usaba en los primeros ordenadores para conectar el ratón. |
+| **DB-25 macho**     | Conector de 25 pines. Es el conector en serie RS-232C, también conocido como COM2, actualmente en desuso en la mayoría de ordenadores.                             |
+| **DB-25 hembra**    | Conector de 25 pines. Es el conector paralelo Centronics o LPT1, usado para impresoras, aunque actualmente se conectan mediante USB.                                |
+| **DB-15 HD (alta densidad) hembra** | Salida de video de quince orificios distribuidos en tres filas. Es el conector VGA y SVGA.                                                           |
+| **DB-15 hembra**    | Es el conector de juegos.                                                                                                                                          |
+| **USB**             | Es el conector de bus en serie universal.                                                                                                                          |
+| **RJ11**            | Es el conector de módem para conectar la línea telefónica.                                                                                                         |
+| **RJ45**            | Es el conector de red (Ethernet).                                                                                                                                  |
+| **DVI**             | Conector para monitores de ordenador que transmite la imagen en formato digital. La configuración estándar tiene 29 pines.                                         |
+| **HDMI**            | Interfaz multimedia de alta definición que permite transmitir audio y video digital de alta calidad entre dispositivos como televisores, tabletas, y teléfonos móviles. |
+| **e-SATA**          | Interfaz externa para conectar dispositivos SATA.                                                                                                                  |
+| **DisplayPort**     | Interfaz de audio/vídeo digital que permite conectar un equipo y su monitor.                                                                                       |
+| **Thunderbolt**     | Interfaz que permite conectar equipos de alto rendimiento a velocidades de hasta 10 Gbps, gestionando tráfico de dispositivos que usan PCIe y DisplayPort.           |
+
+```mermaid
+flowchart TD
+    A[Joystick] --> B[Unidad central]
+    C[Ratón] --> B
+    D[Teclado] --> B
+    E[Escáner] --> B
+    B --> F[Monitor]
+    B --> G[Impresora]
+    B --> H[Otros dispositivos]
+    B --> I[Carcasa y fuente]
+    B --> J[Placa base]
+    J --> K[Conectores]
+    J --> L[Memoria RAM]
+    J --> M[Ranuras de expansión]
+    M --> N[Tarjetas controladoras]
+    I --> O[Cables de conexión]
+```
