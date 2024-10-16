@@ -294,3 +294,55 @@ graph TB
     contadorP --> secuenciador
     registroInstruccion --> descodificador
 ```
+
++ Decodificador de instrucciones: La instruccion que el procesador lleva de la memoria se almacena en el registro de instrucción. IR.
+
++ Reloj o temporizador: El ritmo de funcionamiento del descodificador de instrucciones estan sincronizados con el reloj por medio del bloque secuenciador.
+
++ Secuenciador: Es el dispositivo que marca las pautas con que se tienen que ejecutar las diferentes partes de la instrucción en la coordinación con los impulsos enviados por el reloj.
+
+### Arquitectura de la CPU
+
+Los microprocesadores se han fabricado usando 2 tecnologías conocidas con los nombres de CISC y RISC. Las características de ambas tecnologías son las siguientes:
+
++ CISC: (complex instruction set computing): La tecnología mas usada en lafabricación de los microprocesadores, que consiste en el uso de un juego de instrucciones complejas que se basan en la implementación de un gran numero de instrucciones en el procesador para hacer posible tenir programas mas pequeños y por tanto mas rápidos. Los CPU y los CISC mas extendidos son de la familia 80x86 de intel.
+
++ RISC (Reduced instruction set computing): En esta tecnología se usa un juego de instrucciones reducido y se intenta utilizar el numero mas pequeño de instrucciones. Es el mas fácil de diseñar y tiene la ventaja de hacer las operaciones a mas velocidad, a coste de usar programas mas rápidos. Es una tecnologia mas simple. Pero permite minimizar el numero de instrucciones y la complejidad a a la hora de diseñar un CPU.
+
+## Soportes y unidades de I/O
+Los soportes se pueden clasificar de diferentes maneras, pero las mas usadas son las siguientes:
+
++ Por el uso que se le de:
+- Reutilizable: Podemos hacer servir el soporte mas de una vez para guardar información (por ejemplo, disquetes, disco duro, cinta magnética, etc.)
+- No Reutilizable: Nada mas lo podemos utilizar una vez para guardar la información (por ejemplo, papel, ficha perforada, etc.)
+
++ Por la forma de acceso a la información:
+- Secuenciales: Para acceder a una dterminada información del soporte, hace falta pasar por toda la información anterior (por ejemplo, disco duro, cinta magnética, etc.)
+
+- Directos: Permiten acceder a la información de manera directa o inmediata.
+
++ Por las características físicas del soporte:
+- Perforados: Son los que codifican y mantienen la información por medio de perforaciones en el soporte.
+- Magnéticos: Mantienen la información codificada por medio de dispositivos magnéticos.
+- Ópticos: Los contenidos de estos soportes se manipulan mediante técnicas especiales como la reflexión de la luz.
+- Otros tipos: Forman parte de este grupo, todos los soportes que no podemos situar en ninguno de los anteriores y que se limitan a prsentar los resultados de un proceso.
+
++ Por su situación:
+- Locales: El soporte está situado en el mismo sitio en el que se manipulará.
+- Remotos: El soporte no está situado en el mismo sitio en el que se manipulará la información, sino en otro.
+- Periféricos: Dispositivo periférico es una unidad capaz de manipular el soporte de datos y que permite comunicar el usuario y el ordenador.
+- Clasificación:
++ Según la función:
+- Entrada: Su función es la entrada de datos desde el exterior hasta la memoria principal del ordenador.
+- Salida: Su función es sacar los dtos de la memoria principal al exterior.
+- I/O: Son dispositivos capaces de hacer las 2 funciones anteriores en una misma máquina (Por ejemplo, discos magneticos etc)
++ Por la situación que tienen respecto a la CPU:
+- Locales: Están situados muy cerca de la CPU.
+- Remotos: Están situados lejos de la CPU, por tanto para gestionarlos hacen falta sistemas complementarios.
+
+```mermaid
+graph TD
+    A[Dispositivo periférico] -->|Control de entrada / salida| B[Procesador]
+    A -->|Control de entrada / salida| C[Memoria]
+    B --> C
+```
