@@ -109,7 +109,7 @@ flowchart TD;
 
 ```mermaid
 flowchart TD;
-    A[Entrada] --> B[Memoria principal (Datos e instrucciones)];
+    A[Entrada] --> B[Memoria principal: Datos e instrucciones];
     B --> C[Unidad de control];
     B --> D[Unidad aritmética y lógica (ALU)];
     C --> E[Procesador central (CPU)];
