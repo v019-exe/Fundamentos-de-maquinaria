@@ -47,17 +47,10 @@ Su función principal es el procesamiento de datos.
 
 + Dispositivos de entrada/salida: Son todas las maquinas de configuración de las cuales permiten hacer funciones de entrada y salida (Cintas mágneticas, unidades de discos mágneticos o unidades opticomágneticas, etc.)
 
-+------------------------+     +---------------------------+     +------------------------+
-|                        | --> |                           | --> |                        |
-| Dispositivos de entrada |     | Dispositivos de procesamiento |     | Dispositivos de salida |
-|                        |     |                           |     |                        |
-+------------------------+     +---------------------------+     +------------------------+
-
-                          ^                                     
-                          |                                     
-                          |                                     
-+--------------------------------------------+                  
-|                                            |                  
-| Dispositivos de entrada / salida           |                  
-|                                            |                  
-+--------------------------------------------+
+```mermaid
+graph TD;
+    A[Dispositivos de entrada] --> B[Dispositivos de procesamiento];
+    B --> C[Dispositivos de salida];
+    D[Dispositivos de entrada/salida] --> B;
+    B --> D;
+```
