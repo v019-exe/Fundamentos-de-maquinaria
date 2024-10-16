@@ -223,3 +223,27 @@ graph TB
     busDireccionesExterno -.-> busDatosExterno
     busDireccionesExterno -.-> busControlExterno
 ```
+
+### Los registros
+
+Dentro del procesador hay unas zonas reservadas para el almacenamiento de pequeñas cantidades de información. Son los registros internos.
+
+Se denomina registro un conjunto de bits que se manipulan en bloque.
+
+Podemos diferenciar 2 tipos de registros internos:
+
++ Registros internos de uso general: El procesador usa estos registros para el almacenamiento temporal de datos o direcciones de memoria, es decir la posición de memoria que se almacenan los datos. Podemos encontrar los siguientes:
+
++ Registros internos de datos: Se usan para almacenar datos que el procesador solicita frecuentemente.
+
++ Registros internos de dirección: Se puede guardar la dirección de memoria donde se encuentra el dato.
+
+Registros internos específicos, podemos indicar los siguientes:
++ Contador de programa: Uno de los registros que lleva a cabo el control de las instrucciones del programa que se ejecutan es el contador de programa. Se trata de un registro específico que está pendiente de la instrucción del programa que se ejecuta o el próximo a ejecutar.
+
++ Puntero de pila: dentro de la RAM, hay una zona destinada al almacenamiento de información temporal, es decir pila o stack. Es un registro que mantiene la dirección de un dato que está almacenado en la pila.
+
++ Indicador de resultado: Cada bit del registro indicador de resultado (flag register, FLAGS) contiene información sobre el resultado de la última operación efectuada en la ALU. El numero de bits del FLAGS y su significado varían de un procesador a otro.
+
++ Registro de instrucción: La unidad de control tiene una referencia permanente de la instrucción en curso mediante el registro de instrucción. Mantiene el código de la instrucción que se está ejecutando.
+
