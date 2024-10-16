@@ -158,7 +158,24 @@ graph LR
     %% Flechas explicativas
     memDir([Dirección de memoria]) --> 1
     memPos([Posición de memoria]) --> 7
-
-
 ```
+
++ Registro de dirección de memoria: Antes de realizar cualquier operación de lectura o escritura en la memoria, se tienen que colocar la dirección de la celda que se utilizará en la operación de este registro, tanto como si es para grabar la dirección en un registro o como si es para extraer datos.
+
++ Registro de información o intercambio de memoria (RIM): Este registro recibe la información obtenida de la lectura de la memoria. Este registro tiene que contener la información que queremos escribir y guardar en la memoria.
+
++ Selector de memoria o descodificador: Este dispositivo se activa cada vez que se produce una orden de lectura o escritura. Conecta la celda de memoria, indicada por la dirección de registro de la dirección de memoria con el registro de información de memoria. El cual lo hace posible el hacer transferencias de datos en un sentido o en otro (memoria a RIM, RIM a memoria).
+
+Hay 3 parámetros para medir la velocidad de respuesta de una memoria:
+
++ TA (Tiempo de acceso): Es el tiempo máximo que se tarda en leer o escribir el contenido de una posición de memoria.
+
++ Tiempo de ciclo (TC): El tiempo mínimo entre 2 lecturas.
+
++ Ancho de banda (AB): Es el número de palabras que se transfieren entre la memoria y la CPU en cada unidad de tiempo.
+
+$$
+AB = 1 / TC
+$$
+
 
