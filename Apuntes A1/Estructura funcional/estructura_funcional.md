@@ -122,8 +122,8 @@ flowchart TD;
 **UCP, Unidad de control, memoria, periféricos, buses de datos y control**
 ```mermaid
 flowchart TD;
-    A[UCP/CPU] --> B[UC: Unidad de control];
-    B --> C[Memoria principal (MP)];
+    A[UCP CPU] --> B[UC Unidad de control];
+    B --> C[Memoria principal MP];
     C --> D[Memoria secundaria o masiva];
     D --> C;
     C --> E[Bus de datos];
