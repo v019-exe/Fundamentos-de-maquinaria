@@ -6,7 +6,7 @@ Un sistema informático es un conjunto de elementos necesarios para la realizaci
 
 En un sistema informático hay elementos constitutivos interelacionados entre si:
 
-- Parte lógica: Hardware, todo aquello que se puede ver y tocar en el mundo de la informática (monitores, impresoras, ratón, teclado, etc.)
+- Parte física: Hardware, todo aquello que se puede ver y tocar en el mundo de la informática (monitores, impresoras, ratón, teclado, etc.)
 
 - Parte lógica: Software, tiene su origen en las ideas (conceptos) y está formado por todo aquello que usamos en el campo de la informática que no se puede ni ver ni tocar (programas, SO, etc.)
 
